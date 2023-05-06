@@ -13,20 +13,22 @@
         android:id="@+id/imageView18"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/back4"
         android:scaleType="centerCrop"
-        tools:layout_editor_absoluteX="55dp"
-        tools:layout_editor_absoluteY="469dp" />
+        app:srcCompat="@drawable/back4"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="122dp" />
 
     <ImageView
         android:id="@+id/imageView11"
         android:layout_width="412dp"
         android:layout_height="130dp"
         android:scaleType="centerCrop"
-        app:srcCompat="@drawable/nnnnn"
         app:cornerRadius="10dp"
+        app:srcCompat="@drawable/nnnnn"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="0dp" />
+
+
 
 
     <ImageView
@@ -77,7 +79,7 @@
 
 
     <TextView
-        android:id="@+id/textView7"
+        android:id="@+id/tvCropName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
@@ -159,10 +161,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
+        android:layout_marginTop="192dp"
         android:text="@string/twn1"
         android:textColor="@color/material_dynamic_neutral_variant30"
         app:layout_constraintStart_toEndOf="@+id/imageView31"
-        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+        app:layout_constraintTop_toTopOf="@+id/imageView11" />
 
     <ImageButton
         android:id="@+id/home"

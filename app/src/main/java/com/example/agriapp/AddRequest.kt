@@ -35,8 +35,6 @@ class AddRequest : AppCompatActivity() {
         }
 
     }
-
-
     private fun saveEmployeeData(){
 
         //getting values
