@@ -89,14 +89,14 @@
             android:textSize="16sp" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName3"
+            android:id="@+id/etname"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
             android:layout_marginTop="16dp"
             android:layout_marginRight="16dp"
             android:ems="10"
-            android:hint="Viduth Ranaweera"
+            android:hint="Your name:"
             android:inputType="textPersonName" />
 
         <TextView
@@ -111,7 +111,7 @@
             android:textSize="16sp" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName4"
+            android:id="@+id/etCropName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
@@ -133,7 +133,7 @@
             android:textSize="16sp" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName5"
+            android:id="@+id/etlocation"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
@@ -155,7 +155,7 @@
             android:textSize="16sp" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName6"
+            android:id="@+id/etamount"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
@@ -166,7 +166,7 @@
             android:inputType="textPersonName" />
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/btnSubmitData"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
