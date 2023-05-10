@@ -1,14 +1,16 @@
-package com.example.agriapp
+package com.example.agriapp.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import com.example.agriapp.R
+import com.example.agriapp.models.CropModel
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 
-class AddRequest : AppCompatActivity() {
+class AddRequestActivities : AppCompatActivity() {
     private lateinit var etname: EditText
     private lateinit var etCropName: EditText
     private lateinit var etlocation: EditText
@@ -56,11 +58,11 @@ class AddRequest : AppCompatActivity() {
             etamount.error = "Please enter Amount of crops"
         }
 
-        val empId = dbRef.push().key!!
+        val Orderid = dbRef.push().key!!
 
-        val cropOrder = OrderCrops(name,crop,location,amount)
+        val cropOrder = CropModel(Orderid,name,crop,location, amount)
 
-        dbRef.child(empId).setValue(cropOrder)
+        dbRef.child(Orderid).setValue(cropOrder)
             .addOnCompleteListener{
                 Toast.makeText(this,"Data Insert Successfully", Toast.LENGTH_LONG).show()
             }.addOnFailureListener{ err ->

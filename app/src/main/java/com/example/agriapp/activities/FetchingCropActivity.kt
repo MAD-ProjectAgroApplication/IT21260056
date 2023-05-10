@@ -1,22 +1,19 @@
-package com.example.agriapp
+package com.example.agriapp.activities
 
 import android.annotation.SuppressLint
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
-import android.widget.Button
-import android.widget.ImageButton
 import android.widget.TextView
-import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.agriapp.R
+import com.example.agriapp.models.CropModel
 import com.google.firebase.database.*
 
-class myOrder : AppCompatActivity() {
+class FetchingCropActivity : AppCompatActivity() {
 
     private lateinit var empRecycleView: RecyclerView
     private lateinit var tvLoadingData : TextView
-    private lateinit var empList: ArrayList<OrderCrops>
+    private lateinit var empList: ArrayList<CropModel>
     private  lateinit var dbRef: DatabaseReference
 
     @SuppressLint("WrongViewCast")
@@ -29,7 +26,7 @@ class myOrder : AppCompatActivity() {
 //        empRecycleView.setHasFixedSize(true)
 //        tvLoadingData = findViewById(R.id.tvLoadingData)
 
-        empList = arrayListOf<OrderCrops>()
+        empList = arrayListOf<CropModel>()
 
 //        getEmployeeData()
 
@@ -59,7 +56,7 @@ class myOrder : AppCompatActivity() {
 ////
 ////                    mAdapter.setOnItemClickListner(object :EmpAdapter.onItemClickLisner{
 ////                        override fun onItemClick(position: Int) {
-////                            val intent = Intent(this@myOrder, CropDetailsActivity::class.java)
+////                            val intent = Intent(this@FetchingCropDetailsActivity, CropDetailsActivity::class.java)
 ////
 ////                            put extras
 ////                            intent.putExtra("name",empList[position].name)

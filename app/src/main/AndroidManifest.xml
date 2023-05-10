@@ -18,10 +18,10 @@
             android:name=".updateDetails"
             android:exported="false" />
         <activity
-            android:name=".myOrder"
+            android:name=".activities.FetchingCropActivity"
             android:exported="false" />
         <activity
-            android:name=".AddRequest"
+            android:name=".activities.AddRequestActivities"
             android:exported="false" />
         <activity
             android:name=".cropSelectedPage"
@@ -33,7 +33,7 @@
             android:name=".Available_crops"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".activities.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
