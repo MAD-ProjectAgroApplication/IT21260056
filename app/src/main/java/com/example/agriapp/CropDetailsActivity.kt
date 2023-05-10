@@ -22,9 +22,9 @@ class CropDetailsActivity: AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_employee_details)
+//        setContentView(R.layout.activity_employee_details)
 
-        initView()
+//        initView()
         setValuesToViews()
 
         btnUpdate.setOnClickListener {
@@ -42,16 +42,16 @@ class CropDetailsActivity: AppCompatActivity() {
 
     }
 
-    private fun initView() {
-        tvCropId = findViewById(R.id.tvCropId)
-        tvName = findViewById(R.id.tvName)
-        tvCropName = findViewById(R.id.tvCropName)
-        tvLocation = findViewById(R.id.tvLocation)
-        tvAmount = findViewById(R.id.tvAmount)
-
-        btnUpdate = findViewById(R.id.btnUpdate)
-        btnDelete = findViewById(R.id.btnDelete)
-    }
+//    private fun initView() {
+//        tvCropId = findViewById(R.id.tvCropId)
+//        tvName = findViewById(R.id.tvName)
+//        tvCropName = findViewById(R.id.tvCropName)
+//        tvLocation = findViewById(R.id.tvLocation)
+//        tvAmount = findViewById(R.id.tvAmount)
+//
+//        btnUpdate = findViewById(R.id.btnUpdate)
+//        btnDelete = findViewById(R.id.btnDelete)
+//    }
 
     private fun setValuesToViews() {
         tvCropId.text = intent.getStringExtra("Orderid")
@@ -85,58 +85,58 @@ class CropDetailsActivity: AppCompatActivity() {
     ) {
         val mDialog = AlertDialog.Builder(this)
         val inflater = layoutInflater
-        val mDialogView = inflater.inflate(R.layout.update_dialog, null)
+//        val mDialogView = inflater.inflate(R.layout.update_dialog, null)
 
-        mDialog.setView(mDialogView)
-
-        val etName = mDialogView.findViewById<EditText>(R.id.etname)
-        val etCropName = mDialogView.findViewById<EditText>(R.id.etCropName)
-        val etlocation = mDialogView.findViewById<EditText>(R.id.etlocation)
-        val etamount = mDialogView.findViewById<EditText>(R.id.etamount)
-
-        val btnUpdateData = mDialogView.findViewById<Button>(R.id.btnUpdateData)
-
-        etName.setText(intent.getStringExtra("name").toString())
-        etCropName.setText(intent.getStringExtra("cropName").toString())
-        etlocation.setText(intent.getStringExtra("location").toString())
-        etamount.setText(intent.getStringExtra("amount").toString())
-
-        mDialog.setTitle("Updating $name Record")
-
-        val alertDialog = mDialog.create()
-        alertDialog.show()
-
-        btnUpdateData.setOnClickListener {
-            updateEmpData(
-                OrderId,
-                etName.text.toString(),
-                etCropName.text.toString(),
-                etlocation.text.toString(),
-                etamount.text.toString()
-            )
-
-            Toast.makeText(applicationContext, "Crop Data Updated", Toast.LENGTH_LONG).show()
-
-            //we are setting updated data to our textviews
-            tvName.text = etName.text.toString()
-            tvCropName.text = etCropName.text.toString()
-            tvLocation.text = etlocation.text.toString()
-            tvAmount.text = etamount.text.toString()
-
-            alertDialog.dismiss()
-        }
-    }
-
-    private fun updateEmpData(
-        Orderid: String,
-        name: String,
-        cropName: String,
-        location: String,
-        amount: Float,
-    ) {
-        val dbRef = FirebaseDatabase.getInstance().getReference("cropOrders").child(Orderid)
-        val empInfo = OrderCrops(Orderid, name, cropName, location,amount)
-        dbRef.setValue(empInfo)
+//        mDialog.setView(mDialogView)
+//
+//        val etName = mDialogView.findViewById<EditText>(R.id.etname)
+//        val etCropName = mDialogView.findViewById<EditText>(R.id.etCropName)
+//        val etlocation = mDialogView.findViewById<EditText>(R.id.etlocation)
+//        val etamount = mDialogView.findViewById<EditText>(R.id.etamount)
+//
+//        val btnUpdateData = mDialogView.findViewById<Button>(R.id.btnUpdateData)
+//
+//        etName.setText(intent.getStringExtra("name").toString())
+//        etCropName.setText(intent.getStringExtra("cropName").toString())
+//        etlocation.setText(intent.getStringExtra("location").toString())
+//        etamount.setText(intent.getStringExtra("amount").toString())
+//
+//        mDialog.setTitle("Updating $name Record")
+//
+//        val alertDialog = mDialog.create()
+//        alertDialog.show()
+//
+//        btnUpdateData.setOnClickListener {
+//            updateEmpData(
+//                OrderId,
+//                etName.text.toString(),
+//                etCropName.text.toString(),
+//                etlocation.text.toString(),
+//                etamount.text.toString()
+//            )
+//
+//            Toast.makeText(applicationContext, "Crop Data Updated", Toast.LENGTH_LONG).show()
+//
+//            //we are setting updated data to our textviews
+//            tvName.text = etName.text.toString()
+//            tvCropName.text = etCropName.text.toString()
+//            tvLocation.text = etlocation.text.toString()
+//            tvAmount.text = etamount.text.toString()
+//
+//            alertDialog.dismiss()
+//        }
+//    }
+//
+//    private fun updateEmpData(
+//        Orderid: String,
+//        name: String,
+//        cropName: String,
+//        location: String,
+//        amount: Float,
+//    ) {
+//        val dbRef = FirebaseDatabase.getInstance().getReference("cropOrders").child(Orderid)
+//        val empInfo = OrderCrops(Orderid, name, cropName, location,amount)
+//        dbRef.setValue(empInfo)
     }
 
 

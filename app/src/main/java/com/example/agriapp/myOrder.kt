@@ -18,19 +18,20 @@ class myOrder : AppCompatActivity() {
     private lateinit var tvLoadingData : TextView
     private lateinit var empList: ArrayList<OrderCrops>
     private  lateinit var dbRef: DatabaseReference
+
     @SuppressLint("WrongViewCast")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_my_order)
 
-        empRecycleView = findViewById(R.id.rvEmp)
-        empRecycleView.layoutManager = LinearLayoutManager(this)
-        empRecycleView.setHasFixedSize(true)
-        tvLoadingData = findViewById(R.id.tvLoadingData)
+//        empRecycleView = findViewById(R.id.rvEmp)
+//        empRecycleView.layoutManager = LinearLayoutManager(this)
+//        empRecycleView.setHasFixedSize(true)
+//        tvLoadingData = findViewById(R.id.tvLoadingData)
 
         empList = arrayListOf<OrderCrops>()
 
-        getEmployeeData()
+//        getEmployeeData()
 
 //        val update = findViewById<Button>(R.id.button9)
 //        update.setOnClickListener {
@@ -39,47 +40,47 @@ class myOrder : AppCompatActivity() {
 //        }
     }
 
-    private fun getEmployeeData(){
-        empRecycleView.visibility = View.GONE
-        tvLoadingData.visibility  = View.VISIBLE
-
-        dbRef = FirebaseDatabase.getInstance().getReference("cropOrders")
-
-        dbRef.addValueEventListener(object : ValueEventListener {
-            override fun onDataChange(snapshot: DataSnapshot) {
-                empList.clear()
-                if (snapshot.exists()){
-                    for (empSnap in snapshot.children){
-                        val empData = empSnap.getValue(OrderCrops::class.java)
-                        empList.add(empData!!)
-                    }
-                    val mAdapter = EmpAdapter(empList)
-                    empRecycleView.adapter = mAdapter
-
-                    mAdapter.setOnItemClickListner(object :EmpAdapter.onItemClickLisner{
-                        override fun onItemClick(position: Int) {
-                            val intent = Intent(this@myOrder, CropDetailsActivity::class.java)
-
-                            //put extras
-                            intent.putExtra("name",empList[position].name)
-                            intent.putExtra("cropName",empList[position].cropName)
-                            intent.putExtra("location",empList[position].location)
-                            intent.putExtra("amount",empList[position].amount)
-                            startActivity(intent)
-
-                        }
-
-                    })
-
-                    empRecycleView.visibility = View.VISIBLE
-                    tvLoadingData.visibility = View.GONE
-                }
-            }
-
-            override fun onCancelled(error: DatabaseError) {
-                TODO("Not yet implemented")
-            }
-
-        })
-    }
+//    private fun getEmployeeData(){
+//        empRecycleView.visibility = View.GONE
+//        tvLoadingData.visibility  = View.VISIBLE
+//
+//        dbRef = FirebaseDatabase.getInstance().getReference("cropOrders")
+//
+//        dbRef.addValueEventListener(object : ValueEventListener {
+//            override fun onDataChange(snapshot: DataSnapshot) {
+//                empList.clear()
+//                if (snapshot.exists()){
+//                    for (empSnap in snapshot.children){
+//                        val empData = empSnap.getValue(OrderCrops::class.java)
+//                        empList.add(empData!!)
+//                    }
+////                    val mAdapter = EmpAdapter(empList)
+////                    empRecycleView.adapter = mAdapter
+////
+////                    mAdapter.setOnItemClickListner(object :EmpAdapter.onItemClickLisner{
+////                        override fun onItemClick(position: Int) {
+////                            val intent = Intent(this@myOrder, CropDetailsActivity::class.java)
+////
+////                            put extras
+////                            intent.putExtra("name",empList[position].name)
+////                            intent.putExtra("cropName",empList[position].cropName)
+////                            intent.putExtra("location",empList[position].location)
+////                            intent.putExtra("amount",empList[position].amount)
+////                            startActivity(intent)
+////
+////                        }
+//
+////                    })
+//
+//                    empRecycleView.visibility = View.VISIBLE
+//                    tvLoadingData.visibility = View.GONE
+//                }
+//            }
+//
+////            override fun onCancelled(error: DatabaseError) {
+////                TODO("Not yet implemented")
+////            }
+//
+//        })
+//    }
 }
