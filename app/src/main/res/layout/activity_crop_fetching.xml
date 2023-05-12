@@ -9,8 +9,8 @@
 
     <ImageView
         android:id="@+id/imageView9"
-        android:layout_width="475dp"
-        android:layout_height="845dp"
+        android:layout_width="434dp"
+        android:layout_height="791dp"
         android:scaleType="centerCrop"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -21,9 +21,10 @@
     <androidx.recyclerview.widget.RecyclerView
 
         android:id="@+id/rvEmp"
-        android:layout_width="295dp"
-        android:layout_height="546dp"
-        android:layout_marginStart="1dp"
+        android:layout_width="285dp"
+        android:layout_height="443dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="170dp"
         android:layout_marginEnd="1dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -46,4 +47,34 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="426dp"
+        android:layout_height="110dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView18"
+            android:layout_width="1500dp"
+            android:layout_height="250dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/rec"
+            tools:layout_editor_absoluteY="-20dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/textView39"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="110dp"
+        android:layout_marginTop="40dp"
+        android:text="My Request"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/constraintLayout"
+        app:layout_constraintTop_toTopOf="@+id/constraintLayout" />
 </androidx.constraintlayout.widget.ConstraintLayout>

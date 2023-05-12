@@ -40,22 +40,26 @@ class AddRequestActivities : AppCompatActivity() {
     private fun saveEmployeeData(){
 
         //getting values
-        val name = etname.text.toString()
-        val crop = etCropName.text.toString()
-        val location = etlocation.text.toString()
-        val amount = etamount.text.toString()
+        val name = etname.text.toString().trim()
+        val crop = etCropName.text.toString().trim()
+        val location = etlocation.text.toString().trim()
+        val amount = etamount.text.toString().trim()
 
         if (name.isEmpty()){
             etname.error = "Please enter Your Name"
+            return@saveEmployeeData
         }
         else if(crop.isEmpty()){
             etCropName.error = "Please enter Crop type"
+            return@saveEmployeeData
         }
         if (location.isEmpty()){
             etlocation.error = "Please enter Your location"
+            return@saveEmployeeData
         }
         if (amount.isEmpty()){
             etamount.error = "Please enter Amount of crops"
+            return@saveEmployeeData
         }
 
         val Orderid = dbRef.push().key!!

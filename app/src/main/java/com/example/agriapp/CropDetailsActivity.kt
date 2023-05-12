@@ -25,29 +25,29 @@ class CropDetailsActivity : AppCompatActivity(){
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_crop_details)
+        setContentView(R.layout.activity_update_details)
 
         initView()
         setValuesToViews()
 
         btnUpdate.setOnClickListener {
             openUpdateDialog(
-                intent.getStringExtra("Orderid").toString(),
+                intent.getStringExtra("OrderId").toString(),
                 intent.getStringExtra("name").toString()
             )
         }
 
         btnDelete.setOnClickListener {
             deleteRecord(
-                intent.getStringExtra("Orderid").toString()
+                intent.getStringExtra("OrderId").toString()
             )
         }
 
     }
 
     private fun initView() {
-//        tvOrderId = findViewById(R.id.tvOrderId)
-        tvName = findViewById(R.id.tvCropName)
+        tvOrderId = findViewById(R.id.tvOrderId)
+        tvName = findViewById(R.id.tvName)
         tvCropName = findViewById(R.id.tvCropName)
         tvLocation = findViewById(R.id.tvLocation)
         tvAmount = findViewById(R.id.tvAmount)
@@ -57,7 +57,7 @@ class CropDetailsActivity : AppCompatActivity(){
     }
 
     private fun setValuesToViews() {
-//        tvOrderId.text = intent.getStringExtra("Orderid")
+        tvOrderId.text = intent.getStringExtra("OrderId")
         tvName.text = intent.getStringExtra("name")
         tvCropName.text = intent.getStringExtra("cropName")
         tvLocation.text = intent.getStringExtra("location")
@@ -66,13 +66,13 @@ class CropDetailsActivity : AppCompatActivity(){
     }
 
     private fun deleteRecord(
-        id: String
+        Id: String
     ){
-        val dbRef = FirebaseDatabase.getInstance().getReference("cropOrders").child(id)
+        val dbRef = FirebaseDatabase.getInstance().getReference("cropOrders").child(Id)
         val mTask = dbRef.removeValue()
 
         mTask.addOnSuccessListener {
-            Toast.makeText(this, "Employee data deleted", Toast.LENGTH_LONG).show()
+            Toast.makeText(this, "Crop data deleted", Toast.LENGTH_LONG).show()
 
             val intent = Intent(this, FetchingCropActivity::class.java)
             finish()

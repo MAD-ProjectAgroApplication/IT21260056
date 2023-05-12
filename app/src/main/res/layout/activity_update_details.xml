@@ -4,12 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".updateDetails">
+    tools:context=".activities.FetchingCropActivity">
 
     <ImageView
         android:id="@+id/imageView6"
-        android:layout_width="410dp"
-        android:layout_height="652dp"
+        android:layout_width="448dp"
+        android:layout_height="757dp"
         android:scaleType="centerCrop"
         app:layout_constraintEnd_toEndOf="@+id/linearLayout4"
         app:layout_constraintHorizontal_bias="0.5"
@@ -32,9 +32,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
-        android:text="@string/update"
+        android:text="Your Crop Detail"
         android:textColor="@color/white"
-        android:textSize="48sp"
+        android:textSize="40sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -55,12 +55,62 @@
 
     <LinearLayout
         android:id="@+id/linearLayout4"
-        android:layout_width="409dp"
-        android:layout_height="367dp"
-        android:layout_marginTop="100dp"
+        android:layout_width="324dp"
+        android:layout_height="485dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="50dp"
         android:orientation="vertical"
-        app:layout_constraintTop_toBottomOf="@+id/textView33"
-        tools:layout_editor_absoluteX="1dp">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView33">
+
+        <TextView
+            android:id="@+id/tvOrderId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="100dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="20dp"
+            android:text="OrderID:"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            tools:ignore="MissingConstraints" />
+
+        <!--        <EditText-->
+        <!--            android:id="@+id/tvOrderId"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginLeft="16dp"-->
+        <!--            android:layout_marginRight="16dp"-->
+        <!--            android:layout_marginBottom="20dp"-->
+        <!--            android:ems="10"-->
+        <!--            android:inputType="textPersonName"-->
+        <!--            android:text="id"-->
+        <!--            tools:ignore="MissingConstraints" />-->
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="100dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="20dp"
+            android:text="Name:"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            tools:ignore="MissingConstraints" />
+
+        <!--        <EditText-->
+        <!--            android:id="@+id/tvName"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginLeft="16dp"-->
+        <!--            android:layout_marginRight="16dp"-->
+        <!--            android:layout_marginBottom="20dp"-->
+        <!--            android:ems="10"-->
+        <!--            android:inputType="textPersonName"-->
+        <!--            android:text="Name"-->
+        <!--            tools:ignore="MissingConstraints" />-->
+
 
         <TextView
             android:id="@+id/textView36"
@@ -71,11 +121,11 @@
             android:layout_marginBottom="20dp"
             android:text="Crop type:"
             android:textColor="@color/black"
-            android:textSize="16sp"
+            android:textSize="20sp"
             tools:ignore="MissingConstraints" />
 
-        <EditText
-            android:id="@+id/editTextTextPersonName4"
+        <TextView
+            android:id="@+id/tvCropName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
@@ -83,33 +133,34 @@
             android:layout_marginBottom="20dp"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="@string/croptype2"
+
+            android:textSize="30sp"
             tools:ignore="MissingConstraints" />
 
         <TextView
             android:id="@+id/textView37"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="33dp"
             android:layout_marginLeft="16dp"
             android:layout_marginTop="20dp"
             android:layout_marginRight="16dp"
             android:layout_marginBottom="20dp"
             android:text="Enter your location:"
             android:textColor="@color/black"
-            android:textSize="16sp"
+            android:textSize="20sp"
             tools:ignore="MissingConstraints" />
 
-        <EditText
-            android:id="@+id/editTextTextPersonName5"
+        <TextView
+            android:id="@+id/tvLocation"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
             android:layout_marginBottom="20dp"
             android:ems="10"
-            android:hint="Kurunegala"
             android:inputType="textPersonName"
-            android:text="@string/twn1"
+
+            android:textSize="30sp"
             tools:ignore="MissingConstraints" />
 
         <TextView
@@ -122,33 +173,45 @@
             android:layout_marginBottom="20dp"
             android:text="Enter Amount(Kg):"
             android:textColor="@color/black"
-            android:textSize="16sp" />
+            android:textSize="20sp" />
 
-        <EditText
-            android:id="@+id/editTextTextPersonName6"
+        <TextView
+            android:id="@+id/tvAmount"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
             android:layout_marginBottom="20dp"
             android:ems="10"
-            android:hint="50 Kg"
             android:inputType="textPersonName"
-            android:text="@string/amount1"
+
+            android:textSize="30sp"
             tools:ignore="MissingConstraints" />
 
     </LinearLayout>
 
+
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnUpdate"
         android:layout_width="125dp"
         android:layout_height="59dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="2dp"
         android:backgroundTint="@color/design_default_color_secondary"
         android:text="@string/edit"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.22"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout4" />
 
+    <Button
+        android:id="@+id/btnDelete"
+        android:layout_width="125dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="2dp"
+        android:backgroundTint="@android:color/holo_red_light"
+        android:text="@string/delete"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.87"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout4" />
 </androidx.constraintlayout.widget.ConstraintLayout>

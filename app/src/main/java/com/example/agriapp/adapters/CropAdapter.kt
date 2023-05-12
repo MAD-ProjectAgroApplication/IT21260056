@@ -30,7 +30,7 @@ class CropAdapter (private val cropList:ArrayList<CropModel>):
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val currentCrop = cropList[position]
-        holder.tvName.text = currentCrop.name
+        holder.tvName.text = currentCrop.cropName
     }
 
     override fun getItemCount(): Int {
@@ -39,7 +39,7 @@ class CropAdapter (private val cropList:ArrayList<CropModel>):
 
 
     class ViewHolder(itemView:View,clickLisner: onItemClickLisner) : RecyclerView.ViewHolder(itemView) {
-        val tvName :TextView = itemView.findViewById(R.id.tvCropName)
+        val tvName :TextView = itemView.findViewById(R.id.tvName)
 
         init {
             itemView.setOnClickListener{

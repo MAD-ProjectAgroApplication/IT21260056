@@ -26,6 +26,8 @@
     <string name="phone">Phone</string>
     <string name="email">Email</string>
     <string name="address">Address</string>
+    <string name="OrderID">OrderID</string>
+
 
 
 </resources>
