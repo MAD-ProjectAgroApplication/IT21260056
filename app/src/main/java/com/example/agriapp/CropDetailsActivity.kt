@@ -66,9 +66,9 @@ class CropDetailsActivity : AppCompatActivity(){
     }
 
     private fun deleteRecord(
-        Id: String
+        id: String
     ){
-        val dbRef = FirebaseDatabase.getInstance().getReference("cropOrders").child(Id)
+        val dbRef = FirebaseDatabase.getInstance().getReference("cropOrders").child(id)
         val mTask = dbRef.removeValue()
 
         mTask.addOnSuccessListener {
@@ -83,7 +83,7 @@ class CropDetailsActivity : AppCompatActivity(){
     }
 
     private fun openUpdateDialog(
-        Orderid: String,
+        OrderId: String,
         name: String
     ) {
         val mDialog = AlertDialog.Builder(this)
@@ -111,7 +111,7 @@ class CropDetailsActivity : AppCompatActivity(){
 
         btnUpdateData.setOnClickListener {
             updateEmpData(
-                Orderid,
+                OrderId,
                 etName.text.toString(),
                 etCropName.text.toString(),
                 etLocation.text.toString(),

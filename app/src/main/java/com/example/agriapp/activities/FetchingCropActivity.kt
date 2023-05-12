@@ -65,7 +65,8 @@ class FetchingCropActivity : AppCompatActivity() {
                             val intent = Intent(this@FetchingCropActivity, CropDetailsActivity::class.java)
 
 //                            put extras
-                            intent.putExtra("Name",cropList[position].name)
+                            intent.putExtra("Orderid",cropList[position].Orderid)
+                            intent.putExtra("name",cropList[position].name)
                             intent.putExtra("cropName",cropList[position].cropName)
                             intent.putExtra("location",cropList[position].location)
                             intent.putExtra("amount",cropList[position].amount)

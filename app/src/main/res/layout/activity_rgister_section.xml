@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#82BC85"
+    android:orientation="vertical"
+    tools:context=".login.RegisterSection">
+
+    <TextView
+        android:id="@+id/register2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="16dp"
+        android:background="#82BC85"
+        android:text="Register"
+        android:textAlignment="center"
+        android:textColor="#06600A"
+        android:textSize="70dp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/farmerbtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="90dp"
+        android:layout_marginRight="16dp"
+        android:backgroundTint="#565917"
+        android:text="@string/farmer"
+        android:textSize="34sp" />
+
+    <Button
+        android:id="@+id/buyerbtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="16dp"
+        android:backgroundTint="#565917"
+        android:text="@string/buyer"
+        android:textSize="34sp" />
+
+    <Button
+        android:id="@+id/fertilizer_sellerbtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="16dp"
+        android:backgroundTint="#565917"
+        android:text="@string/fretilizer"
+        android:textSize="34sp" />
+
+    <Button
+        android:id="@+id/distributorbtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="16dp"
+        android:backgroundTint="#565917"
+        android:text="@string/seedDistributor"
+        android:textSize="34sp" />
+
+</LinearLayout>

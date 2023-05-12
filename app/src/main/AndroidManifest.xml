@@ -36,15 +36,41 @@
         <activity
             android:name=".Available_crops"
             android:exported="false" />
+
         <activity
-            android:name=".activities.MainActivity"
+            android:name=".login.login"
+            android:exported="false"/>
+
+        <activity
+            android:name=".login.RegisterSection"
+            android:exported="false"/>
+
+        <activity
+            android:name=".login.Register"
+            android:exported="false"/>
+
+        <activity
+            android:name=".activities.MainActivityBuyer"
+            android:exported="false"/>
+
+
+
+        <activity
+            android:name=".login.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
         </activity>
+
+
+
     </application>
 
 </manifest>

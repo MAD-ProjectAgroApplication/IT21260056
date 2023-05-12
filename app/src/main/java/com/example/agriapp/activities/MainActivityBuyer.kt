@@ -7,14 +7,14 @@ import android.os.Bundle
 import android.widget.ImageButton
 import com.example.agriapp.*
 
-class MainActivity : AppCompatActivity() {
+class MainActivityBuyer : AppCompatActivity() {
 
 
 
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_main_buyer)
 
 //        val Ava = findViewById<ImageButton>(R.id.available)
 //        Ava.setOnClickListener {

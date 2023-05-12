@@ -27,6 +27,17 @@
     <string name="email">Email</string>
     <string name="address">Address</string>
     <string name="OrderID">OrderID</string>
+    <string name="enterUserName">User Name :</string>
+    <string name="enterPassword">Password :</string>
+    <string name="loginsubmit">LOGIN</string>
+    <string name="loginpg">LOGIN</string>
+    <string name="buyer">buyer</string>
+    <string name="farmer">FARMER</string>
+
+    <string name="fretilizer">fertilizer seller</string>
+    <string name="seedDistributor">Seed Distributor</string>
+
+    <string name="register1">Register</string>
 
 
 
