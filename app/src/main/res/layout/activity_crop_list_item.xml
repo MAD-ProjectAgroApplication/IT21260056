@@ -14,12 +14,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginStart="10dp"
+        android:layout_marginStart="8dp"
 
 
         android:layout_marginEnd="10dp"
         android:background="@color/black"
-        android:backgroundTint="@android:color/system_accent1_100"
+        android:backgroundTint="#EAE195"
         android:orientation="vertical"
         android:padding="16dp"
         app:layout_constraintEnd_toEndOf="parent"
