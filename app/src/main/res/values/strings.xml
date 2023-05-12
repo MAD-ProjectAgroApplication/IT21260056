@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Agro</string>
+    <string name="main_title">AGRO</string>
+    <string name="available">Available crops</string>
+    <string name="available1">Available</string>
+    <string name="request">Request crops</string>
+    <string name="my_request">My request</string>
+    <string name="crop_search">Crop type</string>
+    <string name="location">Location</string>
+    <string name="search">Search</string>
+    <string name="myOrders">My Orders</string>
+    <string name="croptype1">Leaks</string>
+    <string name="croptype2">Carrot</string>
+    <string name="crop">Crop type</string>
+    <string name="amount">Amount</string>
+    <string name="twn1">Kurunegala</string>
+    <string name="twn2">Mawathagama</string>
+    <string name="amount1">10 Kg</string>
+    <string name="amount2">20 Kg</string>
+    <string name="edit">UPDATE</string>
+    <string name="delete">DELETE</string>
+    <string name="add">MY ADD</string>
+    <string name="update">Update crop</string>
+    <string name="profile">My Profile</string>
+    <string name="welcome">Welcome!!</string>
+    <string name="phone">Phone</string>
+    <string name="email">Email</string>
+    <string name="address">Address</string>
+
+
+</resources>
