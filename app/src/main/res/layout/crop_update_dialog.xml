@@ -49,7 +49,7 @@
         android:layout_marginTop="20dp"
         android:ems="10"
         android:hint="Amount"
-        android:inputType="textPersonName" />
+        android:inputType="number" />
 
     <Button
         android:id="@+id/btnUpdateData"

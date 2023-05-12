@@ -163,7 +163,7 @@
             android:layout_marginRight="16dp"
             android:ems="10"
             android:hint="50 Kg"
-            android:inputType="textPersonName" />
+            android:inputType="number" />
 
         <Button
             android:id="@+id/btnSubmitData"
