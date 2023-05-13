@@ -62,6 +62,12 @@ class AddRequestActivities : AppCompatActivity() {
             return@saveEmployeeData
         }
 
+        val amountpatern = "[0-9]+"
+        if (!amount.matches(amountpatern.toRegex())) {
+            etamount.error = "Please enter valid amount"
+            return@saveEmployeeData
+        }
+
         val Orderid = dbRef.push().key!!
 
         val cropOrder = CropModel(Orderid,name,crop,location, amount)
