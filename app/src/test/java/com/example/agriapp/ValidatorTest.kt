@@ -24,6 +24,19 @@ class ValidatorTest{
     @Test
     fun whenInputIsInValid1(){
 
+        val name = "viduth"
+        val cropName = "Carrot"
+        val location = "malabe"
+        val amount = -10
+
+        val result = Validator.validateInput(name,cropName,location, amount)
+
+        assertThat(result).isEqualTo(false)
+    }
+
+    @Test
+    fun whenInputIsInValid3(){
+
         val name = ""
         val cropName = "Carrot"
         val location = "malabe"
@@ -42,7 +55,20 @@ class ValidatorTest{
         val location = "malabe"
         val amount = 10
 
-        val result = Validator.validateInput(name,cropName,location, amount)
+        val result = Validator.validateInput1(name,cropName,location, amount)
+
+        assertThat(result).isEqualTo(false)
+    }
+
+    @Test
+    fun whenInputIsInValid4(){
+
+        val name = "viduth"
+        val cropName = "carrot"
+        val location = ""
+        val amount = 10
+
+        val result = Validator.validateInput1(name,cropName,location, amount)
 
         assertThat(result).isEqualTo(false)
     }
